@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    gap: 0px;
+}
+
+span {
+    color:brown
+}
+
+.click {
+    font-size: 30px;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sound-pads {
+    display: flex;
+}
+
+.sound-pads>div {
+    width: 100px;
+    height: 100px;
+    flex: 1;
+    z-index: 1; /*Добавляет приоритеты: шарик появляется за клавишами*/
+}
+
+.pad1 {
+    background-color: rgb(209, 38, 38)
+}
+
+.pad4 {
+    background-color: rgb(100, 59, 213)
+}
+
+.pad3 {
+    background-color: rgb(68, 221, 93)
+}
+
+.pad2 {
+    background-color: rgb(206, 213, 67)
+}
+
+.pad5 {
+    background-color: rgb(212, 76, 178)
+}
+
+.sound-pads>div:hover {
+    transform: translateY(-10px) scaleY(1.2);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.animation-zone>div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+@keyframes bubbleFly { /*Покадровая анимация движения шарика*/
+    0% {
+        bottom: 0%;
+        left: 15%;
+    }
+
+    50% {
+        bottom: 47%;
+        left: 47%;
+    }
+
+    100% {
+        bottom: 0%;
+        left: 85%;
+    }
+}
